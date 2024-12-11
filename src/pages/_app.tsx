@@ -1,3 +1,4 @@
+import React from 'react';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import theme from '../styles/theme';
