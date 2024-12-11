@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1733947411269" clover="3.2.0">
+  <project timestamp="1733947411269" name="All files">
+    <metrics statements="24" coveredstatements="19" conditionals="13" coveredconditionals="7" methods="13" coveredmethods="9" elements="50" coveredelements="35" complexity="0" loc="24" ncloc="24" packages="2" files="2" classes="2"/>
+    <package name="components">
+      <metrics statements="12" coveredstatements="10" conditionals="13" coveredconditionals="7" methods="6" coveredmethods="5"/>
+      <file name="FormikFields.tsx" path="/home/minaevas/projects/test-realstate-app/src/components/FormikFields.tsx">
+        <metrics statements="12" coveredstatements="10" conditionals="13" coveredconditionals="7" methods="6" coveredmethods="5"/>
+        <line num="21" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
+        <line num="74" count="7" type="stmt"/>
+        <line num="76" count="7" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="85" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="styles">
+      <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
+      <file name="theme.ts" path="/home/minaevas/projects/test-realstate-app/src/styles/theme.ts">
+        <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="62" count="17" type="stmt"/>
+        <line num="76" count="22" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="95" count="8" type="stmt"/>
+        <line num="101" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
