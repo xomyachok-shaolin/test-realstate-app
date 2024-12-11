@@ -7,7 +7,8 @@ import {
   Image, 
   VStack, 
   Container, 
-  Text 
+  Text,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { FormikInput, FormikCheckbox, FormikRadioGroup } from '../components/FormikFields';
 import validationSchema from '../validation/validationSchema';
@@ -37,14 +38,30 @@ const initialValues: FormValues = {
 };
 
 const Home: React.FC = () => {
+
   return (
-    <Box bgGradient="linear(to-r, blue.50, blue.100)" minH="100vh" py={10}>
-      <Container maxW="md" bg="white" p={8} borderRadius="md" boxShadow="lg">
+    <Box bg="gray.900" minH="100vh" py={10}>
+      <Container 
+        maxW="xl" 
+        bg="gray.800" 
+        p={8} 
+        borderRadius="md" 
+        boxShadow="lg"
+      >
         <VStack spacing={4} align="stretch">
           <Box textAlign="center">
-            <Image src="/logo.png" alt="Логотип" mx="auto" boxSize="80px" mb={4}/>
-            <Heading as="h1" size="lg" mb={2}>Оцените Ваш Объект Недвижимости</Heading>
-            <Text fontSize="sm" color="gray.600">
+            <Image 
+              src="/logo_gradient.svg" 
+              alt="Логотип" 
+              mx="auto" 
+              boxSize="80px" 
+              minWidth="500px"
+              mb={8}
+            />
+            <Heading as="h1" size="lg" mb={4} color="gold.400">
+              Оцените Ваш Объект Недвижимости
+            </Heading>
+            <Text fontSize="xl" color="gray.300">
               Заполните форму, чтобы получить точную оценку
             </Text>
           </Box>
@@ -80,7 +97,7 @@ const Home: React.FC = () => {
 
                 <Button
                   type="submit"
-                  colorScheme="blue"
+                  variant="gold"
                   width="full"
                   mt={4}
                   isLoading={isSubmitting}

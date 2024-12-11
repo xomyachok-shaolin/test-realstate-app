@@ -1,20 +1,108 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 
-const theme = extendTheme({
-  colors: {
-    brand: {
-      50: '#e4f0ff',
-      100: '#bed8ff',
-      200: '#96beff',
-      300: '#6ea3ff',
-      400: '#4687ff',
-      500: '#2c6ee6',
-      600: '#2155b4',
-      700: '#173b82',
-      800: '#0c2251',
-      900: '#010a21',
+const colors = {
+  gold: {
+    50: "#fff8e1",
+    100: "#ffecb3",
+    200: "#ffe082",
+    300: "#ffd54f",
+    400: "#ffca28",
+    500: "#ffc107",
+    600: "#ffb300",
+    700: "#ffa000",
+    800: "#ff8f00",
+    900: "#ff6f00",
+  },
+  // Additional colors if needed
+};
+
+const config: ThemeConfig = {
+  initialColorMode: "light", // Starting theme
+  useSystemColorMode: false,
+};
+
+const styles = {
+  global: (props: any) => ({
+    body: {
+      bg: "gray.900",
+      color: "whiteAlpha.900",
+    },
+  }),
+};
+
+const components = {
+  Button: {
+    variants: {
+      gold: (props: any) => ({
+        bg: "gold.500", 
+        color: "gray.900",
+        _hover: {
+          bg: "gold.600",
+        },
+      }),
     },
   },
+  Input: {
+    variants: {
+      filled: (props: any) => ({
+        field: {
+          bg: "gray.700",
+          _hover: {
+            bg: "gray.600",
+          },
+          _focus: {
+            bg: "gray.600",
+            borderColor: "gold.500",
+          },
+        },
+      }),
+    },
+  },
+  Checkbox: {
+    baseStyle: (props: any) => ({
+      control: {
+        _checked: {
+          bg: "gold.500",
+          borderColor: "gold.500",
+          _hover: {
+            bg: "gold.600",
+            borderColor: "gold.600",
+          },
+        },
+      },
+    }),
+  },
+  Radio: {
+    baseStyle: (props: any) => ({
+      control: {
+        _checked: {
+          bg: "gold.500",
+          borderColor: "gold.500",
+          _hover: {
+            bg: "gold.600",
+            borderColor: "gold.600",
+          },
+        },
+      },
+    }),
+  },
+  Heading: {
+    baseStyle: (props: any) => ({
+      color: "gold.400",
+    }),
+  },
+  FormLabel: {
+    baseStyle: (props: any) => ({
+      color: "gold.300",
+    }),
+  },
+};
+
+const theme = extendTheme({
+  config,
+  colors,
+  styles,
+  components,
 });
 
 export default theme;

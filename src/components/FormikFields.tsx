@@ -24,7 +24,14 @@ export const FormikInput: React.FC<FormikInputProps> = ({ name, label, type='tex
   return (
     <FormControl mb={4} isInvalid={!!meta.error && meta.touched}>
       {label && <FormLabel htmlFor={name}>{label}</FormLabel>}
-      <Input id={name} type={type} placeholder={placeholder} {...field} />
+      <Input 
+        id={name} 
+        type={type} 
+        placeholder={placeholder} 
+        variant="filled" 
+        focusBorderColor="gold.500" 
+        {...field} 
+      />
       <FormErrorMessage>{meta.error}</FormErrorMessage>
     </FormControl>
   );
@@ -40,7 +47,11 @@ export const FormikCheckbox: React.FC<FormikCheckboxProps> = ({ name, label }) =
 
   return (
     <FormControl mb={4} isInvalid={!!meta.error && meta.touched}>
-      <Checkbox isChecked={field.value} onChange={(e) => helpers.setValue(e.target.checked)}>
+      <Checkbox 
+        isChecked={field.value} 
+        onChange={(e) => helpers.setValue(e.target.checked)} 
+        colorScheme="gold"
+      >
         {label}
       </Checkbox>
       <FormErrorMessage>{meta.error}</FormErrorMessage>
@@ -71,7 +82,7 @@ export const FormikRadioGroup: React.FC<FormikRadioGroupProps> = ({ name, label,
       >
         <Stack direction="row">
           {options.map((opt) => (
-            <Radio key={opt.value} value={opt.value}>
+            <Radio key={opt.value} value={opt.value} colorScheme="gold">
               {opt.label}
             </Radio>
           ))}
